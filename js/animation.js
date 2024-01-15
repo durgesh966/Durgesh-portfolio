@@ -36,12 +36,12 @@ function erase() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
   if (textArray.length) setTimeout(type, newTextDelay + 250);
 });
 
 // preloader
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   const preloader = document.querySelector('.loader-container');
   const content = document.querySelector('.content');
 
@@ -50,4 +50,9 @@ window.addEventListener('load', function() {
     preloader.style.display = 'none';
     content.style.display = 'block';
   }, 1000); // Change the delay time as needed
+});
+
+// moving animation on card 
+$(document).ready(function () {
+  $('.service-item').tilt();
 });
