@@ -739,7 +739,7 @@ img {
     cursor: pointer;
     padding: 5px 10px;
     border-radius: 30px;
-    transition: all 0.3s ease;
+    transition: all 1s ease;
     font-size: 16px;
     color: var(--text-black-600);
     font-weight: 500;
@@ -768,7 +768,7 @@ img {
 .about-section .skills .skill-item {
     flex: 0 0 50%;
     max-width: 50%;
-    padding: 0 15px;
+    padding: 10px 20px;
 }
 
 .about-section .skills .skill-item .progress {
