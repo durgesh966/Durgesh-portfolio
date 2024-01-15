@@ -927,6 +927,7 @@ img {
     padding: 80px 0px 80px;
     min-height: 100vh;
 }
+
 .service-section .service-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
@@ -940,10 +941,63 @@ img {
 .service-section .service-item-inner {
     padding: 50px 15px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 20px;
     width: 100%;
-    transform: translateZ(20px)
+    transform: translateZ(20px);
+    border: 2px solid transparent;
+    transition: border 0.3s ease-in-out;
 }
+
+/* animation */
+.border-animation::before,
+.outer-shadow::after,
+.span-border-animation::before,
+.span-border-animation::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    transition: 1s;
+}
+.border-animation::before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid #ff0;
+    border-left: 2px solid #ff0;
+}
+
+.border-animation::after {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid #ff0;
+    border-right: 2px solid #ff0;
+}
+
+.span-border-animation::before {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid #ff0;
+    border-left: 2px solid #ff0;
+}
+
+.span-border-animation::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid #ff0;
+    border-right: 2px solid #ff0;
+}
+
+
+.border-animation:hover::before,
+.border-animation:hover::after,
+.border-animation:hover .span-border-animation::before,
+.border-animation:hover .span-border-animation::after {
+    width: calc(320px / 2);
+    height: calc(320px / 2);
+}
+
+/* end */
 
 .service-section .service-item-inner:hover h3,
 p {
@@ -1508,6 +1562,3 @@ body>div.pp.portfolio-popup.open>div.pp-details.active>div>div.pp-title>h2 {
 }
 
 /***** End contact section *****/
-.service-item {
-    transition: all 0.3s ease;
-}
