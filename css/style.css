@@ -20,6 +20,7 @@
     --fb-typing-text: #d54d66;
     --selection-fg: #042621;
     --selection-bg: rgb(44, 187, 132);
+    --border-color: rgb(0, 0, 0);
 }
 
 /* dark mode css custom variables */
@@ -38,6 +39,7 @@ body.dark {
     --bg-scroll: rgba(43, 44, 47, 0.5);
     --selection-fg: rgb(224 223 225);
     --selection-bg: rgb(104 116 181);
+    --border-color: rgb(14, 145, 225);
 }
 
 ::selection {
@@ -932,7 +934,7 @@ img {
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     transform: perspective(1000px);
 }
 
@@ -961,29 +963,29 @@ img {
 .border-animation::before {
     top: -2px;
     left: -2px;
-    border-top: 2px solid #ff0;
-    border-left: 2px solid #ff0;
+    border-top: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
 }
 
 .border-animation::after {
     top: -2px;
     right: -2px;
-    border-top: 2px solid #ff0;
-    border-right: 2px solid #ff0;
+    border-top: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
 }
 
 .span-border-animation::before {
     bottom: -2px;
     left: -2px;
-    border-bottom: 2px solid #ff0;
-    border-left: 2px solid #ff0;
+    border-bottom: 2px solid var(--border-color);
+    border-left: 2px solid var(--border-color);
 }
 
 .span-border-animation::after {
     bottom: -2px;
     right: -2px;
-    border-bottom: 2px solid #ff0;
-    border-right: 2px solid #ff0;
+    border-bottom: 2px solid var(--border-color);
+    border-right: 2px solid var(--border-color);
 }
 
 
@@ -991,8 +993,8 @@ img {
 .border-animation:hover::after,
 .border-animation:hover .span-border-animation::before,
 .border-animation:hover .span-border-animation::after {
-    width: calc(320px / 2);
-    height: calc(320px / 2);
+    width: calc(340px / 2);
+    height: calc(340px / 2);
 }
 
 /* end */

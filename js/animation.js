@@ -54,5 +54,8 @@ window.addEventListener('load', function () {
 
 // moving animation on card 
 $(document).ready(function () {
-  $('.service-item').tilt();
+  $('.service-item').tilt({
+      scale: 0.9,
+      speed: 1000,
+  });
 });
